@@ -6,3 +6,8 @@ variable "aws_region" {
 variable "access_key" {} # From secret.tfvars
 
 variable "secret_key" {} # From secret.tfvars
+
+# S3
+variable "site_name" {
+  default = "alexstiff.com"
+}
