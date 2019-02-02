@@ -6,4 +6,4 @@ env:
 script:
   - wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip -O /tmp/terraform.zip
   - sudo unzip /tmp/terraform.zip -d /usr/bin/
-  - terraform validate -check-variables=false'
+  - terraform validate -check-variables=false
