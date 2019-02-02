@@ -5,8 +5,5 @@ env:
 
 script:
   - wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip -O /tmp/terraform.zip
-  - ls /usr
-  - ls /usr/bin
-  - find /
-  - unzip /usr/bin/local /tmp/terraform.zip
+  - unzip /usr/bin/ /tmp/terraform.zip
   - terraform validate -var 'access_key=dummy' -var 'secret_key=dummy'
