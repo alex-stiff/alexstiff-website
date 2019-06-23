@@ -7,9 +7,7 @@ resource "aws_route53_record" "cloudfront-a" {
   name    = "${var.site_name}"
   type    = "A"
 
-  alias {
-    name                   = "${aws_cloudfront_distribution.s3_site.domain_name}"
-    zone_id                = "${aws_cloudfront_distribution.s3_site.hosted_zone_id}"
-    evaluate_target_health = true
-  }
+  records = "${var.github_pages_ips}"
+  zone_id = "${aws_route53_zone.main.zone_id}"
+  ttl     = 60
 }

@@ -11,19 +11,11 @@ This will create the following:
 - S3:
 
   - Bucket for remote Terraform state
-  - Bucket for static website
-
-- Cloudfront:
-
-  - Distribution pointing at S3 bucket
 
 - Route 53:
 
   - Hosted Zone
-  - A-record with naked domain aliased to CloudFront distribution
-
-- Certificate Manager
-  - SSL certificate for naked domain and `*.` + naked domain (eg `mysite.com` and `*.mysite.com`).
+  - A-record with A record containing GitHub pages IP addresses
 
 ## Initial set up
 
